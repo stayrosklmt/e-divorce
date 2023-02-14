@@ -1,0 +1,22 @@
+<div class="container mt-5 d-flex flex-row flex-wrap">
+
+    <h4 *ngIf="divorces.length === 0">There is no divorces yet!</h4>
+    <div class="card m-2" style="width: 35rem;"  *ngFor="let divorce of divorces">
+        <div class="card-body">
+            <h5 class="card-title">Divorce {{ divorce.status }}</h5>
+            <p class="card-text">Date of marriage: {{ divorce.marriage | date: 'dd/MM/yyyy' }}</p>
+            <p class="card-text">Date of divorce request: {{ divorce.divorceCreated | date: 'dd/MM/yyyy' }}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Husband one: {{divorce.husbandOneLastname + " " + divorce.husbandOneFirstname}}</li>
+            <li class="list-group-item">Lawyer of first husband: {{ divorce.lawyerOneLastname + " " + divorce.lawyerOneFirstname}}</li>
+            <li class="list-group-item">Husband two: {{divorce.husbandTwoLastname + " " + divorce.husbandTwoFirstname}}</li>
+            <li class="list-group-item">Lawyer of second husband: {{ divorce.lawyerTwoLastname + " " + divorce.lawyerTwoFirstname}}</li>
+        </ul>
+        <div class="card-body">
+            <button type="submit" class="btn btn-primary btn-block me-2" [disabled] = "divorce.status != 'PENDING'" (click)="approve(divorce)">Approve</button>
+            <button type="submit" class="btn btn-danger btn-block" [disabled] = "divorce.status != 'PENDING'" (click)="reject(divorce)">Reject</button>
+        </div>
+      </div>
+
+</div>

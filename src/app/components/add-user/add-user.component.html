@@ -1,0 +1,41 @@
+<div class="container d-felx align-items-center justify-content-center m-5 w-100">
+    <div>
+        <form class="col g-3 m-4">
+            <div class="col-md-6 mt-2">
+                <label for="firstname" class="form-label">First name</label>
+                <input type="text" class="form-control" id="firstname" name="firstname" [(ngModel)]="user.firstname">
+            </div>
+            <div class="col-md-6 mt-2">
+                <label for="lastname" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="lastname" name="lastname" [(ngModel)]="user.lastname">
+            </div>
+            <div class="col-md-6 mt-2">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" name="username" [(ngModel)]="user.username">
+            </div>
+            <div class="col-md-6 mt-2">
+                <label for="socialSecurityNumber" class="form-label">Social Security Number</label>
+                <input type="text" class="form-control" id="socialSecurityNumber" name="socialSecurityNumber" [(ngModel)]="user.socialSecurityNumber">
+            </div>
+            <div class="col-md-6 mt-2">
+                <label for="taxIdentificationNumber" class="form-label">Tax Identification Number</label>
+                <input type="text" class="form-control" id="taxIdentificationNumber" name="taxIdentificationNumber" [(ngModel)]="user.taxIdentificationNumber">
+            </div>
+            <div class="col-md-6 mt-2">
+                <label for="role" class="form-label">Select role for user</label>
+                <select class="form-select" [(ngModel)]="selectedRole" name="options">
+                    <!-- <option selected>Select Role</option> -->
+                    <option *ngFor="let role of roles" [value]="role">{{ role }}</option>
+                </select>
+            </div>
+            <div class="col-md-6 mt-2">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" [(ngModel)]="user.password">
+            </div>
+
+            <div class="col-6 mt-3">
+            <button type="submit" class="btn btn-primary" (click)="onCreate()">Save changes</button>
+            </div>
+        </form>
+    </div>
+</div>

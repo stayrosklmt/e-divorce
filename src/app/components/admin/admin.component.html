@@ -1,0 +1,29 @@
+<div class="container">
+    <table class="table mt-4">
+        <thead>
+          <tr>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Username</th>
+            <th>Social Security Number</th>
+            <th>Tax Identification Number</th>
+            <th>Options</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{ user.firstname }}</td>
+            <td>{{ user.lastname }}</td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.socialSecurityNumber }}</td>
+            <td>{{ user.taxIdentificationNumber }}</td>
+            <td>
+              <button type="submit" class="btn btn-primary btn-block me-3" (click)="onEdit(user)">Edit</button>
+              <button type="submit" class="btn btn-danger btn-block" (click)="onDelete(user.id)">Delete</button>
+            <td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button type="submit" class="btn btn-primary btn-block mt-3" [routerLink]="['/add-user']">Create new user</button>
+</div>

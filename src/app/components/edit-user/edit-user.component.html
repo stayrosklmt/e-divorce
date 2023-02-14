@@ -1,0 +1,30 @@
+<div class="container d-felx align-items-center justify-content-center m-5 w-100">
+    <div>
+        <form class="col g-3 m-4">
+            <div class="col-md-6 mt-2">
+                <label for="edit-firstname" class="form-label">First name</label>
+                <input type="text" class="form-control" id="edit-firstname" name="firstname" [(ngModel)]="firstname">
+            </div>
+            <div class="col-md-6 mt-2">
+                <label for="edit-lastname" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="edit-lastname" name="lastname" [(ngModel)]="lastname">
+            </div>
+            <div class="col-md-6 mt-2">
+                <label for="edit-username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="edit-username" name="username" [(ngModel)]="username">
+            </div>
+            <div class="col-md-6 mt-2">
+                <label for="editSSN" class="form-label">Social Security Number</label>
+                <input type="text" class="form-control" id="editSSN" name="socialSecurityNumber" [(ngModel)]="socialSecurityNumber">
+            </div>
+            <div class="col-md-6 mt-2">
+                <label for="editTIN" class="form-label">Tax Identification Number</label>
+                <input type="text" class="form-control" id="editTIN" name="taxIdentificationNumber" [(ngModel)]="taxIdentificationNumber">
+            </div>
+
+            <div class="col-6 mt-3">
+            <button type="submit" class="btn btn-primary" (click)="onSave()">Save changes</button>
+            </div>
+        </form>
+    </div>
+</div>

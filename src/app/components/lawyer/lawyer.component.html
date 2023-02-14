@@ -1,0 +1,29 @@
+<div class="container d-felx align-items-center justify-content-center m-5 w-100">
+    <div>
+        <form class="col g-3 m-4">
+            <div class="col-md-6 mt-2">
+                <label for="lawyerOne" class="form-label">First lawyer</label>
+                <input type="text" class="form-control" id="lawyerOne" name="lawyerOne" [(ngModel)]="divorce.lawyerOne">
+            </div>
+            <div class="col-md-6 mt-2">
+                <label for="husbandOne" class="form-label">First husband</label>
+                <input type="text" class="form-control" id="husbandOne" name="husbandOne" [(ngModel)]="divorce.husbandOne">
+            </div>
+            <div class="col-md-6 mt-2">
+                <label for="lawyerTwo" class="form-label">Second lawyer</label>
+                <input type="text" class="form-control" id="lawyerTwo" name="lawyerTwo" [(ngModel)]="divorce.lawyerTwo">
+            </div>
+            <div class="col-md-6 mt-2">
+                <label for="husbandTwo" class="form-label">Second husband</label>
+                <input type="text" class="form-control" id="husbandTwo" name="husbandTwo" [(ngModel)]="divorce.husbandTwo">
+            </div>
+            <div class="col-md-6 mt-2">
+                <label for="marriageDate" class="form-label">Date of marriage</label>
+                <input type="date" class="form-control" id="marriageDate" name="marriageDate" [(ngModel)]="divorce.marriageDate">
+            </div>
+            <div class="col-6 mt-3">
+                <button type="submit" class="btn btn-primary" (click)="onCreate()">Submit divorce</button>
+            </div>
+        </form>
+    </div>
+</div>
